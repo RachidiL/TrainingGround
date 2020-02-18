@@ -1,0 +1,23 @@
+header{
+    
+}
+nav{
+    height: 55px;
+}
+
+body{
+    
+}
+section{
+    position: absolute;
+    top: 30%;
+    
+    margin-bottom: 80px;
+}
+footer{
+    height: 75px;
+}
+hr{
+    background-color: black;
+    height: 1.5px;
+}
