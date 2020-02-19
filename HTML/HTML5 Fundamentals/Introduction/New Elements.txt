@@ -1,0 +1,21 @@
+article			header			svg
+
+aside			main			time
+
+audio			math			track
+
+bdi			mark			video
+
+canvas			meter			wbr
+
+datalist		nav
+
+details			output
+
+embed			progress
+
+figcaption		section
+
+figure			source
+
+footer			summary
