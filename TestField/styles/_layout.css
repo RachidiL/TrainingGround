@@ -3,19 +3,19 @@ header{
 }
 nav{
     height: 55px;
+    border-bottom: 2px solid blue;
 }
 
-body{
-    
+body{ 
 }
 section{
     position: absolute;
     top: 30%;
-    
-    margin-bottom: 80px;
+   margin-bottom: 80px;
 }
 footer{
     height: 75px;
+    border-top: 2px solid blue;
 }
 hr{
     background-color: black;
