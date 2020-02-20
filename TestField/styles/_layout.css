@@ -2,10 +2,30 @@ header{
     
 }
 nav{
-    height: 55px;
+    height: 70px;
+    /*border-bottom: 2px solid blue;*/
+}
+.navRow{
+    height: inherit;
+    position: inherit;
+    width: 100%;
     border-bottom: 2px solid blue;
 }
-
+.navCol1{
+    height: inherit;
+    position: inherit;
+}
+.navRow1{
+    height: inherit;
+    position: inherit;
+    width: 100%;
+    z-index: 3;
+}
+.navButtons{
+    height: 70px;
+    width: 100%;
+    border-bottom: 2px solid blue;
+}
 body{ 
 }
 section{
@@ -20,4 +40,20 @@ footer{
 hr{
     background-color: black;
     height: 1.5px;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
 }

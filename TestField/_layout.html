@@ -16,7 +16,65 @@
   <body>
     <header>
         <nav class="navbar navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand js-scroll-trigger" type="button" href="#Start">Workspace Teams</a>
+           <div class="row navRow bg-transparent text-white">
+                <div class="col-6">
+                    <div class="row align-content-center" style="height: 100%">
+                        <div class="col-2">
+                           <a class="navbar-brand" href="#Start">
+                            <img src="img/Logo3.png" alt="Worship Teams" height="45" width="70">
+                           </a>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-8 d-flex ">
+                            <div class="input-group">
+                               <span class="fa fa-search form-control-feedback">
+                                   <!--<div class="input-group-text bg-white b-0">
+                                       <i class="fa fa-search"></i>
+                                   </div>-->
+                               </span>
+                                <input class="form-control align-self-center" type="text" placeholder="Search...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row" style="height:100%;">
+                        <div class="col-2">
+                          <button class="btn navButtons bg-dark d-flex justify-content-center" type="button">
+                            <img src="img/classroom.svg" height="30" style="position: absolute; top: 20%">
+                            <p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em;">Class room</p>
+                          </button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn navButtons bg-dark d-flex justify-content-center" type="button">
+                                <img src="img/Work.svg" height="30" style="position: absolute; top: 20%">
+                                <p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em"> Work</p>
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn navButtons bg-dark d-flex justify-content-center" type="button">
+                                <img src="img/Not.svg" height="30" style="position: absolute; top: 20%">
+                                <p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em">Not</p>
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn navButtons bg-dark" type="button">
+                                <img src="img/bell-white.svg" height="30" alt="Notification">
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn navButtons bg-dark" type="button">
+                                <p class="text-white" >Apps</p>
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn navButtons bg-dark">
+                                <p class="text-white">Account</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -27,6 +85,11 @@
                 <div class="bg-primary mr-5 ml-5" style="height: 150px; width: 150px"></div>
                 <div class="bg-success mr-5 ml-5" style="height: 150px; width: 150px"></div>
             </div>
+            <!-- Actual search box -->
+  <div class="form-group has-search">
+    <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
         </section>
     </main>
     <footer class="container-fluid fixed-bottom bg-dark">
