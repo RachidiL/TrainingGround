@@ -27,7 +27,29 @@ footer {
 }
 .zoom{
     transition: transform .2s;
+    height: 7px;
 }
 .zoom:hover{
     transform: scale(1.2);
+}
+
+
+
+.mydiv{
+    width: 55px;
+    height: 55px;
+    position: relative; 
+    right: 13px;
+    bottom: 39px;
+    overflow: hidden
+}
+.mydiv:before{
+    content:'';
+    position:absolute;
+    bottom:33%;
+    right: 18%;
+    width:65%;
+    height:65%;
+    border-radius: 100%;
+    box-shadow: 0px 30px 0px 100px gray;
 }
