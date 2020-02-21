@@ -18,3 +18,16 @@ footer {
     background-color: #000;
     border-top: 2px solid gray;
 }
+.appsText{
+    font-size: 12pt;
+}
+.appsDiv{
+    position: relative;
+    top: 5px;
+}
+.zoom{
+    transition: transform .2s;
+}
+.zoom:hover{
+    transform: scale(1.2);
+}
