@@ -1,0 +1,21 @@
+//// @media ////
+
+// *Mobile devieces
+@media (min-width: 576px){}
+
+// *Medium devices (tables, 768px and up)
+@medai (min-width: 768px){}
+
+// *Large devices (desktops, 992px and up)
+@media(min-width: 992px){}
+
+// *Extra large devices (large desktop, 1200px and up)
+@media (min-width: 1200px){}
+
+
+/////////////////////////////////////////////////
+###############Size shortcut ###################
+- sm -> small
+- md -> medium
+- lg -> large
+- xl -> extra large
