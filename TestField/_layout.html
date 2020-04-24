@@ -8,10 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
     <!-- Own CSS -->
     <link rel="stylesheet" href="/styles/_layout.css" type="text/css">
 
     <title>Test Field |</title>
+    <link rel="icon" href="/img/WT.png" type="image/x-icon">
   </head>
   <body>
     <header>
@@ -26,58 +29,69 @@
                         </div>
                         <div class="col-2"></div>
                         <div class="col-8 d-flex ">
-                            <div class="input-group">
+                            <div class="input-group has-search">
                                <span class="fa fa-search form-control-feedback">
-                                   <!--<div class="input-group-text bg-white b-0">
-                                       <i class="fa fa-search"></i>
-                                   </div>-->
                                </span>
-                                <input class="form-control align-self-center" type="text" placeholder="Search...">
+                                <input class="form-control rounded-0 align-self-center" type="text" placeholder="Search...">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col d-flex justify-content-end mr-1">
                     <div class="row" style="height:100%;">
-                        <div class="col-2">
-                          <button class="btn navButtons bg-dark d-flex justify-content-center" type="button">
-                            <img src="img/classroom.svg" height="30" style="position: absolute; top: 20%">
-                            <p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em;">Class room</p>
+                        <div class="col m-0 mr-1 p-0" style="width: 55px;">
+                          <button class="btn navButtons rounded-0 bg-dark d-flex justify-content-center" type="button" style="width: 55px;">
+                            <img src="img/classroom.svg" height="30" style="">
+                            <!--<p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em;">Class room</p>-->
                           </button>
                         </div>
-                        <div class="col-2">
-                            <button class="btn navButtons bg-dark d-flex justify-content-center" type="button">
-                                <img src="img/Work.svg" height="30" style="position: absolute; top: 20%">
-                                <p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em"> Work</p>
+                        <div class="col m-0 mr-1 p-0" style="width: 55px;">
+                            <button class="btn navButtons rounded-0 bg-dark d-flex justify-content-center" type="button" style="width: 55px;">
+                                <img src="img/Work.svg" height="30" style="">
+                                <!--<p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em"> Work</p>-->
                             </button>
                         </div>
-                        <div class="col-2">
-                            <button class="btn navButtons bg-dark d-flex justify-content-center" type="button">
-                                <img src="img/Not.svg" height="30" style="position: absolute; top: 20%">
-                                <p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em">Not</p>
+                        <div class="col m-0 mr-1 p-0" style="width: 55px;">
+                            <button class="btn navButtons rounded-0 bg-dark d-flex justify-content-center" type="button" style="width: 55px; color: darkgrey">
+                               <i class="far fa-bookmark" style="font-size: 24px;"></i>
+                                <!--<img src="img/Not.svg" height="30" style="position: absolute; top: 10%"> -->
+                                <!--<p class="text-white mb-0" style="position: absolute; bottom: 10%; font-size: 0.8em">Not</p> -->
                             </button>
                         </div>
-                        <div class="col-2">
-                            <button class="btn navButtons bg-dark" type="button">
-                                <img src="img/bell-white.svg" height="30" alt="Notification">
+                        <div class="seperatorDiv"></div>
+                        <div class="col m-0 p-0 ml-1" style="width: 32px;">
+                            <button class="btn navButtons rounded-0 bg-dark d-flex justify-content-center" type="button" style="font-size:24px; : px; color:darkgray;">
+                              <i class="far fa-bell"></i>
+                               <!-- <img src="img/bell-white.svg" height="30" alt="Notification"> -->
                             </button>
                         </div>
-                        <div class="col-2">
-                            <button class="btn navButtons bg-dark" type="button">
-                                <p class="text-white" >Apps</p>
+                        <div class="col m-0 p-0 mr-1" style="width: 55px;">
+                            <button class="btn navButtons rounded-0 bg-dark pt-0 navbar-toggler" type="button" style="width: 55px;">
+                              <span class="navbar-toggler-icon"></span>
+                               <!--<div class="row d-flex justify-content-around pr-3 pl-3" style="position: relative; bottom: 5px;">
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                </div>
+                                <div class="row d-flex justify-content-around pr-3 pl-3" style="position: relative; bottom: 2px;">
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                </div>
+                                <div class="row d-flex justify-content-around pr-3 pl-3" style="position: relative; top: 1px;">
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                    <div class="col-2 bg-white m-0 p-0 zoom"></div>
+                                </div>
+                                <div class="row d-flex m-0 p-0 justify-content-center appsDiv">
+                                    <p class="m-0 text-white appsText" style="position: absolute; bottom: 10%; font-size: 0.8em">Apps</p>
+                                </div> -->
                             </button>
                         </div>
-                        <div class="dropdown">
-                            <button class="btn navButtons bg-dark btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                test
+                        <div class="col m-0 p-0" style="width: 55px;">
+                            <button class="btn navButtons rounded-0 bg-dark" style="width: 55px;">
+                                <p class="text-white">Account</p>
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -92,11 +106,6 @@
                 <div class="bg-primary mr-5 ml-5" style="height: 150px; width: 150px"></div>
                 <div class="bg-success mr-5 ml-5" style="height: 150px; width: 150px"></div>
             </div>
-            <!-- Actual search box -->
-  <div class="form-group has-search">
-    <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
         </section>
     </main>
     <footer class="container-fluid fixed-bottom bg-dark">
@@ -121,5 +130,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   </body>
 </html>

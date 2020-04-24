@@ -2,14 +2,14 @@ header{
     
 }
 nav{
-    height: 70px;
+    height: 55px;
     /*border-bottom: 2px solid blue;*/
 }
 .navRow{
     height: inherit;
     position: inherit;
     width: 100%;
-    border-bottom: 2px solid blue;
+    border-bottom: 3px solid blue;
 }
 .navCol1{
     height: inherit;
@@ -22,7 +22,7 @@ nav{
     z-index: 3;
 }
 .navButtons{
-    height: 70px;
+    height: 53px;
     width: 100%;
     border-bottom: 2px solid blue;
 }
@@ -34,8 +34,8 @@ section{
    margin-bottom: 80px;
 }
 footer{
-    height: 75px;
-    border-top: 2px solid blue;
+    height: 55px;
+    border-top: 3px solid blue;
 }
 hr{
     background-color: black;
@@ -48,7 +48,8 @@ hr{
 
 .has-search .form-control-feedback {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
+  top: 6pt;
   display: block;
   width: 2.375rem;
   height: 2.375rem;
@@ -57,3 +58,24 @@ hr{
   pointer-events: none;
   color: #aaa;
 }
+
+.seperatorDiv{
+    margin: 0;
+    padding: 0;
+    border-right: solid #000;
+    height: 75%;
+    position: relative;
+    align-self: center;
+}
+appsDiv{
+    position: absolute;
+    bottom: 0;
+}
+.zoom{
+    /*transition: transform .2s;*/
+    height: 7px;
+}
+/*
+.zoom:hover{
+    transform: scale(1.2);
+}*/
