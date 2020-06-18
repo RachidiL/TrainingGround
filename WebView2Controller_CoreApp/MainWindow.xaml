@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <wv2:WebView2 Name="WebView" Source="https://www.microsoft.com" />
     </Grid>
 </Window>

@@ -6,16 +6,27 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Microsoft.Web.WebView2/0.9.538": {}
+      "Microsoft.Web.WebView2/0.9.538-prerelease": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
-    "Microsoft.Web.WebView2/0.9.538": {
+    "Microsoft.Web.WebView2/0.9.538-prerelease": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nJC47ZBzspoLEeFT03U1CVP8CN22T5/NAppxW/Ps3OYgfhydk72VweXT+GXWzzwho/SBlrAmOPX9YHYNEKzC8A==",
-      "path": "microsoft.web.webview2/0.9.538",
-      "hashPath": "microsoft.web.webview2.0.9.538.nupkg.sha512"
+      "sha512": "sha512-oaUFDmRrz1/dlFY3N6Us4zAGW7dvNGCklisto1BFr9YWjiHx0PWLuRrju3gc5wLGf59YJpN7ltbNZrI74zaHaQ==",
+      "path": "microsoft.web.webview2/0.9.538-prerelease",
+      "hashPath": "microsoft.web.webview2.0.9.538-prerelease.nupkg.sha512"
     }
   }
 }

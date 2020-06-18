@@ -2,8 +2,16 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Microsoft.Web.WebView2/0.9.538": {
+      "Microsoft.Web.WebView2/0.9.538-prerelease": {
         "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {}
+        },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
         }
@@ -11,16 +19,18 @@
     }
   },
   "libraries": {
-    "Microsoft.Web.WebView2/0.9.538": {
-      "sha512": "nJC47ZBzspoLEeFT03U1CVP8CN22T5/NAppxW/Ps3OYgfhydk72VweXT+GXWzzwho/SBlrAmOPX9YHYNEKzC8A==",
+    "Microsoft.Web.WebView2/0.9.538-prerelease": {
+      "sha512": "oaUFDmRrz1/dlFY3N6Us4zAGW7dvNGCklisto1BFr9YWjiHx0PWLuRrju3gc5wLGf59YJpN7ltbNZrI74zaHaQ==",
       "type": "package",
-      "path": "microsoft.web.webview2/0.9.538",
+      "path": "microsoft.web.webview2/0.9.538-prerelease",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "WebView2.idl",
         "WebView2.tlb",
+        "WebView2Experimental.idl",
+        "WebView2Experimental.tlb",
         "build/Microsoft.Web.WebView2.targets",
         "build/arm64/WebView2Loader.dll",
         "build/native/Microsoft.Web.WebView2.targets",
@@ -29,6 +39,7 @@
         "build/native/arm64/WebView2Loader.dll.lib",
         "build/native/include/WebView2.h",
         "build/native/include/WebView2EnvironmentOptions.h",
+        "build/native/include/WebView2Experimental.h",
         "build/native/x64/WebView2Guid.lib",
         "build/native/x64/WebView2Loader.dll",
         "build/native/x64/WebView2Loader.dll.lib",
@@ -37,14 +48,24 @@
         "build/native/x86/WebView2Loader.dll.lib",
         "build/x64/WebView2Loader.dll",
         "build/x86/WebView2Loader.dll",
-        "microsoft.web.webview2.0.9.538.nupkg.sha512",
+        "lib/net462/Microsoft.Web.WebView2.Core.dll",
+        "lib/net462/Microsoft.Web.WebView2.Core.xml",
+        "lib/net462/Microsoft.Web.WebView2.WinForms.dll",
+        "lib/net462/Microsoft.Web.WebView2.WinForms.xml",
+        "lib/net462/Microsoft.Web.WebView2.Wpf.dll",
+        "lib/net462/Microsoft.Web.WebView2.Wpf.xml",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.xml",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
+        "microsoft.web.webview2.0.9.538-prerelease.nupkg.sha512",
         "microsoft.web.webview2.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.Web.WebView2 >= 0.9.538"
+      "Microsoft.Web.WebView2 >= 0.9.538-prerelease"
     ]
   },
   "packageFolders": {
@@ -92,7 +113,7 @@
         "dependencies": {
           "Microsoft.Web.WebView2": {
             "target": "Package",
-            "version": "[0.9.538, )"
+            "version": "[0.9.538-prerelease, )"
           }
         },
         "imports": [
