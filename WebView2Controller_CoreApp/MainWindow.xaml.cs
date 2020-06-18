@@ -30,8 +30,9 @@ namespace WebView2Controller_CoreApp
         private void EnsureHttps(object? sender, CoreWebView2NavigationStartingEventArgs args)
         {
             var uri = args.Uri;
-            if (!uri.StartsWith("https://"))
-                args.Cancel = true;
+            if (uri.StartsWith("https://")) return;
+            WebView.CoreWebView2.ExecuteScriptAsync($"alert('{uri} is not safe, try an https link!')");
+            args.Cancel = true;
         }
 
         private void ButtonGo_OnClick(object sender, RoutedEventArgs e)
