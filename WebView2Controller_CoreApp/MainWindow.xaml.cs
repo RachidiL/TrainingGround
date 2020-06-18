@@ -25,9 +25,26 @@ namespace WebView2Controller_CoreApp
         {
             InitializeComponent();
             WebView.NavigationStarting += EnsureHttps;
+            InitializeAsync();
         }
 
-        private void EnsureHttps(object? sender, CoreWebView2NavigationStartingEventArgs args)
+        public async void InitializeAsync()
+        {
+            await WebView.EnsureCoreWebView2Async(null);
+            WebView.CoreWebView2.WebMessageReceived += UpdateAddressBar;
+
+            await WebView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync("window.chrome.webview.postMessage(window.document.URL);");
+            await WebView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync("window.chrome.webview.addEventListener(\'message\', event => alert(event.data));");
+        }
+
+        public void UpdateAddressBar(object? sender, CoreWebView2WebMessageReceivedEventArgs args)
+        {
+            var uri = args.TryGetWebMessageAsString();
+            AddressBar.Text = uri;
+            WebView.CoreWebView2.PostWebMessageAsString(uri);
+        }
+
+        public void EnsureHttps(object? sender, CoreWebView2NavigationStartingEventArgs args)
         {
             var uri = args.Uri;
             if (uri.StartsWith("https://")) return;

@@ -12,6 +12,6 @@
             <Button x:Name="ButtonGo" Click="ButtonGo_OnClick" Content="Go"/>
             <TextBox Name="AddressBar" />
         </DockPanel>
-        <wv2:WebView2 Name="WebView" Source="http://www.eplandata.de/portal" />
+        <wv2:WebView2 Name="WebView" Source="https://www.eplandata.de/portal" />
     </DockPanel>
 </Window>
