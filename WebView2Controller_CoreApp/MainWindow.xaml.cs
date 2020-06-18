@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Web.WebView2.Core;
 
 namespace WebView2Controller_CoreApp
 {
@@ -23,6 +24,14 @@ namespace WebView2Controller_CoreApp
         public MainWindow()
         {
             InitializeComponent();
+            WebView.NavigationStarting += EnsureHttps;
+        }
+
+        private void EnsureHttps(object? sender, CoreWebView2NavigationStartingEventArgs args)
+        {
+            var uri = args.Uri;
+            if (!uri.StartsWith("https://"))
+                args.Cancel = true;
         }
 
         private void ButtonGo_OnClick(object sender, RoutedEventArgs e)
