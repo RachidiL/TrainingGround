@@ -24,5 +24,10 @@ namespace WebView2Controller_FrameworkApp
         {
             InitializeComponent();
         }
+
+        private void ButtonGo_OnClick(object sender, RoutedEventArgs e)
+        {
+           WebView?.CoreWebView2?.Navigate(AddressBar.Text);
+        }
     }
 }
