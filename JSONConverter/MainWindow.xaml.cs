@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JSONConverter.Model;
+using JSONConverter.ViewModel;
+using System.Collections.Specialized;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace JSONConverter
 {
@@ -20,14 +11,16 @@ namespace JSONConverter
     /// </summary>
     public partial class MainWindow : Window
     {
+        JSONData jsonData;
         public MainWindow()
         {
             InitializeComponent();
+            jsonData = new JSONData();
+            DataContext = jsonData;
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            //this.Close();
             Application.Current.Shutdown();
         }
 
@@ -38,7 +31,16 @@ namespace JSONConverter
 
         private void JSONFileDroped(object sender, DragEventArgs e)
         {
-            MessageBox.Show("File was droped!");
+            var dataObject = e.Data as DataObject;
+
+            if (dataObject.ContainsFileDropList())
+            {
+                StringCollection fileNames = dataObject.GetFileDropList();
+
+                var jsonDataParser = new JSONDataParser(jsonData);
+                jsonDataParser.ReadJSONFile(fileNames[0]);
+            }
+
         }
     }
 }

@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <ScrollViewer x:Name="JSONfileViewer" Grid.Column="0" BorderThickness="5" BorderBrush="Gray" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" AllowDrop="True" Drop="JSONFileDroped"></ScrollViewer>
+            <ScrollViewer x:Name="JSONfileViewer" Grid.Column="0" BorderThickness="5" BorderBrush="Gray" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" AllowDrop="True" Drop="JSONFileDroped" Content="{Binding JSONContent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></ScrollViewer>
 
             <ScrollViewer x:Name="CodeViewer" Grid.Column="1" BorderThickness="5" CanContentScroll="True" HorizontalScrollBarVisibility="Auto"></ScrollViewer>
         </Grid>
