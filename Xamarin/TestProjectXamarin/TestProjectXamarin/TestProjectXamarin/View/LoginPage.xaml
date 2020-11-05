@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestProjectXamarin.View.LoginPage">
+    <StackLayout x:Name="MasterLayout">
+
+        <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+            <Label x:Name="NoInternetLabel" HorizontalOptions="Center" TextColor="White" BackgroundColor="Red"/>
+            <Image x:Name="LoginIcon" Source="WT.png" Margin="0,80,0,0"/>
+        </StackLayout>
+        
+        <StackLayout x:Name="LoginEntries" VerticalOptions="StartAndExpand">
+            <StackLayout.Padding>
+                <OnIdiom x:TypeArguments="Thickness">
+                    <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                    <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                </OnIdiom>
+            </StackLayout.Padding>
+
+            <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+
+            <Label x:Name="usernameLabel" Text="Username"/>
+            <Entry x:Name="usernameEntry" Placeholder="Username"/>
+            <Label x:Name="passwordLabel" Text="Password"/>
+            <Entry x:Name="passwordEntry" Placeholder="pASSWORD"/>
+            <Button x:Name="signInButton" Text="Sign in" Clicked="SignInButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,141 @@
+Data-Types:
+
+INT                 -- Whole Numbers
+DECIMAL(M, N)       -- Decimal Numbers - Exact Value
+VARCHAR(1)          -- String of text of lenght 1
+BLOB                -- Binary Large Object, Stores large Data
+DATE                -- 'YYYY - MM - DD'
+TIMESTAMP           -- 'YYYY - MM - DD HH:MM:SS' - used for recording time
+
+DESCRIBE 'Table name'   -- Describes the named table
+
+//Modify the table after Creating
+ALTER TABLE student_id ADD gpa DECIMAL(3, 2);
+
+//Drop a specific Column
+ALTER TABLE student DROP COLUMN gpa;
+
+//Create new database
+CREATE DATABASE name
+//Create a new user in database
+CREATE USER 'user_name'@'host' IDENTIFIED BY 'new_password';
+
+//With the GRANT statment u grants privileges to MySQL user accounts
+GRANT ALL ON db1.* TO 'user_name'@'host';
+
+//refreshing permissions 
+FLUSH PRIVILEGES;
+
+// changing plugin
+ALTER USER 'user_name'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
+
+///<summary>
+///Creating Tables
+///</summary>
+
+// Example 1:
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(15),
+    major VARCHAR(20)
+);
+
+//Example 2:
+CREATE TABLE student (
+    student_id INT,
+    name VARCHAR(15),
+    major VARCHAR(20),
+    PRIMARY KEY(student_id)
+);
+
+///<summary>
+///Inserting Datas
+///</summary>
+
+INSERT INTO student VALUES(value1, value2, ...);
+//The insertion order muss fit the value order seted while creating the table
+
+//When I just want to insert specific values because I don't know the other values for some reasons
+INSERT INTO student(student_id, name) VALUES(2, 'Kate');
+
+///<summary>
+///Constrains (Keywords)
+///</summary>
+NOT NULL            -- The value cannot be NULL
+UNIQE               -- The field hase to be unique each row in that table
+DEFAULT             -- Default value (needs to be declared when creating)
+AUTO_INCREMENT      -- Speciy that the data that get insertet will be automatically incremented (very usefull for PRIMARY_Key)
+
+///<summary>
+///Update and Delete
+///</summary>
+// Update: Example 1
+UPDATE student
+SET major = 'Bio'
+Where major = 'Biology';
+
+//Update: Example 2
+UPDATE student
+SET major = 'Biochemistry'
+Where major = 'Biology' OR major = 'Chemestry;
+
+//Update: Example 3 - change multiple Columns
+UPDATE student
+SET name = 'Tom', major = 'undecided'
+Where student_id = 1;
+
+//Update: Example 4 - change all rows
+UPDATE student
+SET major = 'undecided';
+
+// Delete: Example 1
+DELETE FROM student
+Where student_id = 5;
+
+// Delete: Example 2 - delete the whole table content
+DELETE FROM student;
+
+///<summary>
+///Basic Queries
+///</summary>
+// get the Whole table content
+SELECT * FROM student;
+
+// select specific Columns
+SELECT name FROME student;      -- will selec just the name column
+
+SELECT student.naem, student.major
+FROM student
+ORDER BY name;      // DESC Order in Descending or ASC Order in Ascending
+
+SELECT student.naem, student.major
+FROM student
+ORDER BY major, student_id;      // Order by major then by student_id
+
+SELECT *
+FROM student
+LIMIT 2;              // retrieve just two contents 
+
+//Comment in sql --
+
+// Filtering
+//comparison operators
+-- <, >, <=, >=, =, <>, AND, OR
+
+SELECT *
+FROM student
+WHERE name IN ('Claire', 'Kate', 'Mike'); -- get the name when it is in that group pf values
+
+///<summary>
+///Functions
+///</summary>
+COUNT()     --
+AVG()       -- Avarage
+SUM()
+
+///<summary>
+///Wildcards
+///</summary>
+%       -- stands for any number of Characters
+_       -- on character
+
