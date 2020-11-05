@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GetStarted.View.NoteEntryPage"
+             Title="Enter note">
+    <StackLayout>
+        <!--<Frame x:Name="Header" BackgroundColor="Gray" Padding="18" CornerRadius="0">
+            <Label Text="Single-Page App" HorizontalOptions="Center" TextColor="White" FontSize="24"/>
+        </Frame>-->
+        <Editor x:Name="editField" Placeholder="Enter your note..." Text="{Binding Text}" HeightRequest="540"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="saveButton" Grid.Column="0" Clicked="saveButton_Clicked" Text="Save"/>
+            <Button x:Name="deleteButton" Grid.Column="1" Clicked="deleteButton_Clicked" Text="Delete"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
