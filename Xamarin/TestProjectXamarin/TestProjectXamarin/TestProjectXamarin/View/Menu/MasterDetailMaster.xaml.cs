@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TestProjectXamarin.Model;
 using TestProjectXamarin.View.DetailViews;
+using TestProjectXamarin.View.DetailViews.SettingsViews;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,7 +27,8 @@ namespace TestProjectXamarin.View.Menu
             mainMenuItem.MenuItems = new ObservableCollection<MainMenuItem>(new[]
             {
                  new MainMenuItem{Id = 0, Title = "MasterDetailDetail" , BackgroundColor = Color.White, TargetType = typeof(MasterDetailDetail)},
-                new MainMenuItem{Id = 1, Title = "Infoscreen1" , BackgroundColor = Color.White, TargetType = typeof(InfoScreen)}
+                new MainMenuItem{Id = 1, Title = "Infoscreen1" , BackgroundColor = Color.White, TargetType = typeof(InfoScreen)},
+                new MainMenuItem{Id = 2, Title = "Settings" , BackgroundColor = Color.White, TargetType = typeof(SettingsScreen)}
             }); 
             BindingContext = mainMenuItem;
             ListView = MenuItemsListView;

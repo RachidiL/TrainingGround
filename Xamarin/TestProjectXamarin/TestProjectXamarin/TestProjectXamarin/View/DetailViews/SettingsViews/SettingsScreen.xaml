@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProjectXamarin.View.DetailViews.SettingsViews.SettingsScreen">
+    <StackLayout Orientation="Vertical">
+        <StackLayout>
+            <Label x:Name="NoInternetLbl" HorizontalOptions="Center" TextColor="White" BackgroundColor="Red"/>
+        </StackLayout>
+
+        <StackLayout x:Name="MainLayout">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value="10, 20, 10, 20" />
+                        <On Platform="Android" Value="10, 0, 10, 20" />
+                        <On Platform="UWP" Value="0, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </StackLayout.Padding>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

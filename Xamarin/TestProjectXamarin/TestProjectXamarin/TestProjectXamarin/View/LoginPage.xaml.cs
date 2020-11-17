@@ -44,6 +44,12 @@ namespace TestProjectXamarin.View
                 var result = new Token();
 
                 await DisplayAlert("Login", "Login Success.", "Ok");
+
+                if(App.SettingsDatabase.GetSettings() == null)
+                {
+                    Settings settings = new Model.Settings();
+                    App.SettingsDatabase.SaveSettings(settings);
+                }
                 
                 if (result != null)
                 {
