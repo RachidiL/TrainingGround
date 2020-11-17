@@ -68,5 +68,20 @@ namespace Sesson2Xamarin
             ListViewItem item = (ListViewItem)e.Item;
             Navigation.PushAsync( new DetailView(item));
         }
+
+        private void Cancel_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Toolbar", "Cancel Button", "Ok");
+        }
+
+        private void Save_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Toolbar", "Save Button", "Ok");
+        }
+
+        private void Settings_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
