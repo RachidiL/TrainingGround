@@ -17,24 +17,45 @@ namespace Sesson2Xamarin
         {
             InitializeComponent();
             InitList();
+            InitSearchBar();
+        }
+
+        private void InitSearchBar()
+        {
+            searchBar.TextChanged += (s, e) => FilterItem(searchBar.Text);
+            searchBar.SearchButtonPressed += (s, e) => FilterItem(searchBar.Text);
+        }
+
+        private void FilterItem(string filter)
+        {
+            listViewExample.BeginRefresh();
+            if(string.IsNullOrWhiteSpace(filter))
+            {
+                listViewExample.ItemsSource = Items;
+            }
+            else
+            {
+                listViewExample.ItemsSource = Items.Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+            }
+            listViewExample.EndRefresh();
         }
 
         private void InitList()
         {
             Items = new List<ListViewItem>();
             Items.Add(new ListViewItem { 
-                Name = "Test1",
+                Name = "abc",
                 Value = 10,
                 Text = "Blablabla This is View 1"});
             Items.Add(new ListViewItem
             {
-                Name = "Test2",
+                Name = "bca",
                 Value = 15,
                 Text = "Blablabla this is View 2"
             });
             Items.Add(new ListViewItem
             {
-                Name = "Test3",
+                Name = "cab",
                 Value = 20,
                 Text = "Blablabla this is View 3"
             });
