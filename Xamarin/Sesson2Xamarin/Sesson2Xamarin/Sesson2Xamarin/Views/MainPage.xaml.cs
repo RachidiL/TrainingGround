@@ -74,9 +74,29 @@ namespace Sesson2Xamarin
             DisplayAlert("Toolbar", "Cancel Button", "Ok");
         }
 
-        private void Save_Clicked(object sender, EventArgs e)
+        private async void Save_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Toolbar", "Save Button", "Ok");
+            //DisplayAlert("Toolbar", "Save Button", "Ok");
+            List<string> buttons = new List<string>
+            {
+                "Button1",
+                "Button2",
+                "Button3"
+            };
+            var reaction = await DisplayActionSheet("Title", "Cancel", "Ok", buttons.ToArray());
+
+            switch (reaction)
+            {
+                case "Button1":
+                    await DisplayAlert("DisplayActionSheet", "Button1", "Ok");
+                    break;
+                case "Button2":
+                    await DisplayAlert("DisplayActionSheet", "Button2", "Ok");
+                    break;
+                case "Button3":
+                    await DisplayAlert("DisplayActionSheet", "Button3", "Ok");
+                    break;
+            }
         }
 
         private void Settings_Clicked(object sender, EventArgs e)
