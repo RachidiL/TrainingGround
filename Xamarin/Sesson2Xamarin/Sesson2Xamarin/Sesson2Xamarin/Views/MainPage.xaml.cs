@@ -31,6 +31,29 @@ namespace Sesson2Xamarin
             InitList();
             InitSearchBar();
             InitPicker();
+            GetDateTime();
+            InitSwitch();
+        }
+
+        private void InitSwitch()
+        {
+            SwitchT.Toggled += SwitchT_Toggled;
+        }
+
+        private void SwitchT_Toggled(object sender, ToggledEventArgs e)
+        {
+            DisplayAlert("Title", $"Date selected: {e.Value}", "Cancel");
+        }
+
+        private void GetDateTime()
+        {
+            DateTime date = DatePicker1.Date;
+            DatePicker1.DateSelected += DatePicker1_DateSelected;
+        }
+
+        private void DatePicker1_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            DisplayAlert("Title", $"Date selected: {e.NewDate}", "Cancel");
         }
 
         private void InitPicker()

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="Sesson2Xamarin.MainPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="Save" Text="Save" Clicked="Save_Clicked" Order="Primary"/>
@@ -10,6 +11,28 @@
 
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Switch:" Margin="10,0,0,0"/>
+                <Switch x:Name="SwitchT" HorizontalOptions="Center" IsToggled="False"/>
+            </StackLayout>
+            
+            <DatePicker x:Name="DatePicker1" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+                <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+                <DatePicker.MinimumDate>
+                    <sys:DateTime x:FactoryMethod="Parse">
+                        <x:Arguments>
+                            <x:String>Jan 1 2000</x:String>
+                        </x:Arguments>
+                    </sys:DateTime>
+                </DatePicker.MinimumDate>
+                <DatePicker.MaximumDate>
+                    <sys:DateTime x:FactoryMethod="Parse">
+                        <x:Arguments>
+                            <x:String>Dec 31 2050</x:String>
+                        </x:Arguments>
+                    </sys:DateTime>
+                </DatePicker.MaximumDate>
+            </DatePicker>
 
             <Label Text="Entry"/>
             <Entry x:Name="Entry1" Placeholder="Entry1" HorizontalOptions="FillAndExpand"/>
