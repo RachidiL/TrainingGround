@@ -11,6 +11,13 @@
     <ContentPage.Content>
         <StackLayout>
 
+            <Label Text="Entry"/>
+            <Entry x:Name="Entry1" Placeholder="Entry1" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Password"/>
+            <Entry x:Name="EntryPassword" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Editor"/>
+            <Editor x:Name="Editor1" HeightRequest="100" HorizontalOptions="EndAndExpand" Completed="Editor1_Completed"/>
+
             <Picker x:Name="picker" Title="Color" HorizontalOptions="CenterAndExpand"/>
             <BoxView x:Name="boxView" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center"/>
             

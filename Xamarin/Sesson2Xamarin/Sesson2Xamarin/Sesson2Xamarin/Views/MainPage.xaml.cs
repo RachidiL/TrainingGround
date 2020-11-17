@@ -136,5 +136,10 @@ namespace Sesson2Xamarin
         {
 
         }
+
+        private void Editor1_Completed(object sender, EventArgs e)
+        {
+            DisplayAlert("Title", "Message", "Cancel");
+        }
     }
 }
