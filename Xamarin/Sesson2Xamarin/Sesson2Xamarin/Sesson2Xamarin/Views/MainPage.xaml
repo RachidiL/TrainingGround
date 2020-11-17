@@ -4,6 +4,15 @@
              x:Class="Sesson2Xamarin.MainPage">
 
     <ListView x:Name="listViewExample">
-        
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="{Binding Name}"/>
+                        <Label Grid.Column="1" Text="{Binding Value}"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
     </ListView>
 </ContentPage>
