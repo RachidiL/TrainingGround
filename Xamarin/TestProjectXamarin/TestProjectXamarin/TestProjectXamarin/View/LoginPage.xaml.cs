@@ -39,15 +39,19 @@ namespace TestProjectXamarin.View
 
             if (user.CheckInformation())
             {
-                await DisplayAlert("Login", "Login Success.", "Ok");
+                ActivitySpinner.IsVisible = true;
                 //var result = await App.RestService.Login(user);
                 var result = new Token();
+
+                await DisplayAlert("Login", "Login Success.", "Ok");
+                
                 if (result != null)
                 {
+                    ActivitySpinner.IsVisible = false;
                     //App.UserDatabase.SaveUser(user);
                     //App.TokenDatabase.SaveToken(result);
                     //await Navigation.PushAsync(new Dashboard());
-                    if(Device.RuntimePlatform == Device.Android)
+                    if (Device.RuntimePlatform == Device.Android)
                     {
                         Application.Current.MainPage = new NavigationPage(new MasterDetail());
                     }
@@ -58,7 +62,10 @@ namespace TestProjectXamarin.View
                 }
             }
             else
+            {
                 await DisplayAlert("Login", "Login Not Correct, empty username or password", "Ok");
+                ActivitySpinner.IsVisible = false;
+            }
         }
     }
 }
