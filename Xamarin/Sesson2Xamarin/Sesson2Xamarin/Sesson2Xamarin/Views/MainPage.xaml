@@ -11,6 +11,9 @@
     <ContentPage.Content>
         <StackLayout>
 
+            <Picker x:Name="picker" Title="Color" HorizontalOptions="CenterAndExpand"/>
+            <BoxView x:Name="boxView" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center"/>
+            
             <SearchBar x:Name="searchBar" Placeholder="Search..."/>
 
             <ListView x:Name="listViewExample">

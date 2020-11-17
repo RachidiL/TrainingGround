@@ -13,11 +13,44 @@ namespace Sesson2Xamarin
     public partial class MainPage : ContentPage
     {
         List<ListViewItem> Items;
+        Dictionary<string, Color> NamesToColor = new Dictionary<string, Color>
+        {
+            {"Aqua", Color.Aqua }, {"Black", Color.Black},
+            {"Blue", Color.Blue }, {"Fucshua", Color.Fuchsia},
+            {"Gray", Color.Gray }, {"Greewn", Color.Green},
+            {"Lime", Color.Lime }, {"Maroon", Color.Maroon},
+            {"Navy", Color.Navy }, {"Olive", Color.Olive},
+            {"Purple", Color.Purple }, {"Red", Color.Red},
+            {"Silver", Color.Silver }, {"Teal", Color.Teal},
+            {"White", Color.White }, {"Yellow", Color.Yellow},
+
+        };
         public MainPage()
         {
             InitializeComponent();
             InitList();
             InitSearchBar();
+            InitPicker();
+        }
+
+        private void InitPicker()
+        {
+            foreach (var color in NamesToColor.Keys)
+            {
+                picker.Items.Add(color);
+            }
+            picker.SelectedIndexChanged += (s, e) =>
+            {
+                if (picker.SelectedIndex == -1)
+                {
+                    boxView.Color = Color.Default;
+                }
+                else
+                {
+                    var colortemp = picker.SelectedItem.ToString();
+                    boxView.Color = NamesToColor[colortemp];
+                }
+            };
         }
 
         private void InitSearchBar()
